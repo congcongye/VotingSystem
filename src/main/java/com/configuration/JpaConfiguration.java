@@ -1,4 +1,4 @@
-package com.song.configuration;
+package com.configuration;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
@@ -9,14 +9,12 @@ import org.springframework.dao.annotation.PersistenceExceptionTranslationPostPro
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-/**
- * Created by Song on 2017/2/13.
- */
+
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @Configuration
 @EnableTransactionManagement(proxyTargetClass = true)
-@EnableJpaRepositories(basePackages = "com.song.repository")
-@EntityScan(basePackages = "com.song.entity")
+@EnableJpaRepositories(basePackages = "com.repository")
+@EntityScan(basePackages = "com.entity")
 public class JpaConfiguration {
     @Bean
     PersistenceExceptionTranslationPostProcessor persistenceExceptionTranslationPostProcessor(){

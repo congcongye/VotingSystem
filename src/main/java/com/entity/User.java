@@ -1,11 +1,7 @@
-package com.song.entity;
+package com.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by Song on 2017/2/15.
- * Model 用户
- */
 @Entity
 @Table(name = "tbl_user")
 public class User {
